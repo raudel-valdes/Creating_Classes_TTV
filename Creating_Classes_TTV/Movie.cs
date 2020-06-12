@@ -4,16 +4,14 @@ using System.Text;
 
 namespace Creating_Classes_TTV
 {
-    class Movie
+    class Movie : MediaTypeBase
     {
-        public readonly string Title;
         public readonly string Director;
         public string Loanee = "";
         public bool onLoan = false;
 
-        public Movie(string title, string director)
+        public Movie(string title, string director) : base(title)
         {
-            Title = title;
             Director = director;
         }
 

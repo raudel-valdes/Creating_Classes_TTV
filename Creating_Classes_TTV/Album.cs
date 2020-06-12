@@ -5,16 +5,14 @@ using System.Text;
 
 namespace Creating_Classes_TTV
 {
-    class Album
+    class Album : MediaTypeBase
     {
-        public readonly string Title;
         public readonly string Artist;
         public string Loanee = "";
         public bool onLoan = false;
 
-        public Album(string title, string artist)
+        public Album(string title, string artist) : base (title)
         {
-            Title = title;
             Artist = artist;
         }
 

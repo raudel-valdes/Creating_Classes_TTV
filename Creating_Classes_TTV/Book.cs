@@ -4,16 +4,14 @@ using System.Text;
 
 namespace Creating_Classes_TTV
 {
-    class Book
+    class Book : MediaTypeBase
     {
-        public readonly string Title;
         public readonly string Author;
         public string Loanee = "";
         public bool onLoan = false;
 
-        public Book(string title, string author)
+        public Book(string title, string author) : base(title)
         {
-            Title = title;
             Author = author;
         }
 
