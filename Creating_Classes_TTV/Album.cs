@@ -8,8 +8,6 @@ namespace Creating_Classes_TTV
     class Album : MediaTypeBase
     {
         public readonly string Artist;
-        public string Loanee = "";
-        public bool onLoan = false;
 
         public Album(string title, string artist) : base (title)
         {
@@ -20,23 +18,6 @@ namespace Creating_Classes_TTV
         {
             if (!string.IsNullOrEmpty(Loanee)) return "Album: " + Title + " by " + Artist + (onLoan ? " (Currently on loan to " + Loanee + ")" : "");
             else return "Album: " + Title + " by " + Artist + (onLoan ? " (Currently on loan)" : "");
-        }
-
-        public void Loan(string name)
-        {
-            Loanee = name;
-            Loan();
-        }
-
-        public void Loan()
-        { 
-            onLoan = true;
-        }
-
-        public void Return()
-        {
-            Loanee = "";
-            onLoan = false;
         }
     }
 }
